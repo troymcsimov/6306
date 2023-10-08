@@ -1,5 +1,5 @@
 ---
-title: "Project - Data Exploration - Week 8"
+title: "Project - Data Exploration - Week 8 (remove rows with missing data)"
 author: "Troy McSimov"
 date: "`r Sys.Date()`"
 output: html_document
@@ -29,7 +29,7 @@ library(kableExtra)
 setwd("C:/Users/troym/Dropbox/Troy/Personal/SMU/6306 - Doing Data Science/_GitHub/troymcsimov/6306/Case Study 1/data/")
 
 # Load both beers.csv and breweries.csv data files
-beers = read.csv(file = "Beers.csv")
+beers = read.csv(file = "Beers_updated.csv")
 breweries = read.csv(file = "Breweries.csv")
 ```
 
@@ -127,11 +127,21 @@ IBU_row_number <- which(median_result$IBU == max(median_result$IBU))
 # Print the result with the highest median ABV and IBU highlighted
 knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% row_spec(c(ABV_row_number, IBU_row_number), background = "yellow") 
 
+# Plot bar chart showing median ABV and IBU for each state
+#hist(median_result)
+
 ```
 
 ## 5.	Which state has the maximum alcoholic (ABV) beer? Which state has the most bitter (IBU) beer?
 
-### The state of Maine has both the highest median of ABV and IBU as highlighted above in the 'Median ABM and IBU by State' table
+### While the state of Maine has both the highest median of ABV and IBU as highlighted above in the 'Median ABM and IBU by State' table, state of 
+
+```{r max ABV and IBU}
+max_ABV <- which(filtered_brews$ABV == max(filtered_brews$ABV))
+max_IBU <- which(filtered_brews$IBU == max(filtered_brews$IBU))
+filtered_brews[max_ABV, ]
+filtered_brews[max_IBU, ]
+```
 
 ## 6.	Comment on the summary statistics and distribution of the ABV variable.
 
