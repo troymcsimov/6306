@@ -141,8 +141,23 @@ IBU_row_number <- which(median_result$IBU == max(median_result$IBU))
 # Print the result with the highest median ABV by State highlighted in yellow and the highest median IBU by State hightlighted in pink
 knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% row_spec(ABV_row_number, background = "yellow") %>% row_spec(IBU_row_number, background = "pink")
 
-# Plot bar chart showing median ABV and IBU for each state
-
+# Plot bar chart showing median ABV for each state
+ggplot(median_result, aes(x = State, y = ABV, fill = State)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  labs(y = "ABV", x = "State",
+       title = "Median Alcohol by Volume by State")
+  theme_minimal() +
+theme(axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=90, hjust=1))  # Vertical x-axis labels
+  
+  # Plot bar chart showing median IBU for each state
+ggplot(median_result, aes(x = State, y = IBU, fill = State)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  labs(y = "IBU", x = "State",
+       title = "Median International Bitterness Units by State")
+  theme_minimal() +
+theme(axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=90, hjust=1))  # Vertical x-axis labels
 
 ```
 
