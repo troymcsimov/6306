@@ -28,8 +28,8 @@ library(kableExtra)
 # Set working directory to project folder
 setwd("C:/Users/troym/Dropbox/Troy/Personal/SMU/6306 - Doing Data Science/_GitHub/troymcsimov/6306/Case Study 1/data/")
 
-# Load both beers.csv and breweries.csv data files
-beers = read.csv(file = "Beers_updated.csv")
+# Load both beers_updated.csv and breweries.csv data files
+beers = read.csv(file = "Beers_updated.csv") # Beers_updated.csv is an update from Beers.csv with some of the missing ABVs populated and known styles with to no IBU
 breweries = read.csv(file = "Breweries.csv")
 ```
 
@@ -83,13 +83,13 @@ tail(brews, n=6) # Looks okay
 ### However, based on the distribution of ABV and Styles for the records missing IBU values, it appears as though the missing IBU values is not dependent on any other data in the dataset (MCAR), as such we have removed these 1,005 beers from further analysis with 1,405 beers remaining in the dataset.
 
 ```{r NAs}
+# There are only 17 beers missing ABV, these will be removed given the small amount
+filtered_brews <- brews[!is.na(brews$ABV), ]
+
 # Create dataset of just rows with null IBU to further investigate in correlation in these missing values
-nulls <- brews[is.na(brews$IBU), ]
+nulls <- filtered_brews[is.na(brews$IBU), ]
 
-# Filter out rows with null ABV values
-nulls <- nulls[!is.na(nulls$ABV), ]
-
-# Observe counts of unique values in each column to determine if any correlation might be identified
+# Observe counts of unique values in each column to determine if any correlation might be identified of the 969 rows missing IBUs
 table(nulls['ABV']) # no correlation seen when compared to full dataset
 table(nulls['Ounces']) # no correlation seen when compared to full dataset
 table(nulls['Style']) # no correlation seen when compared to full dataset
@@ -97,10 +97,24 @@ table(nulls['Name.y']) # no correlation seen when compared to full dataset
 table(nulls['City']) # no correlation seen when compared to full dataset
 table(nulls['State']) # no correlation seen when compared to full dataset
 
-# Create filtered dataset without rows containing missing IBU values
-filtered_brews <- brews[!is.na(brews$IBU), ]
-summary(filtered_brews) # There were 1,005 records removed with 1,405 remaining
-summary(brews)
+# Get median IBU of each Style
+IBU_lookup <- filtered_brews %>%
+  group_by(Style) %>%
+  summarise(
+    median_IBU_Style = median(IBU, na.rm = TRUE)
+  )
+
+# Create new column in brews to include median IBU for each style
+# Loop through each row in filtered_brews
+for(i in 1:nrow(filtered_brews)){
+  if(is.na(filtered_brews$IBU[i])){
+    filtered_brews$IBU[i] <- IBU_lookup$median_IBU_Style[IBU_lookup$Style == filtered_brews$Style[i]]
+  }
+}
+
+# There are still 11 beers missing IBU due to no available median value for their particular class, these will be removed
+filtered_brews <- filtered_brews[!is.na(filtered_brews$IBU), ]
+
 ```
 
 ## 4.	Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
@@ -124,11 +138,11 @@ median_result <- median_result[, c("State", "ABV", "IBU")]
 ABV_row_number <- which(median_result$ABV == max(median_result$ABV))
 IBU_row_number <- which(median_result$IBU == max(median_result$IBU))
 
-# Print the result with the highest median ABV and IBU highlighted
-knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% row_spec(c(ABV_row_number, IBU_row_number), background = "yellow") 
+# Print the result with the highest median ABV by State highlighted in yellow and the highest median IBU by State hightlighted in pink
+knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% row_spec(ABV_row_number, background = "yellow") %>% row_spec(IBU_row_number, background = "pink")
 
 # Plot bar chart showing median ABV and IBU for each state
-#hist(median_result)
+
 
 ```
 

@@ -71,13 +71,13 @@ Hurricane Amber Ale (2004),751,0.052,24,102,American Amber / Red Ale,12
 Hurricane Amber Ale,120,0.052,24,102,American Amber / Red Ale,12
 Arkansas Red,1650,0.052,,140,American Amber / Red Ale,12
 WinterWonderGrass Festival Ale,1163,,,64,American Amber / Red Ale,12
-Boohai Red Ale,940,0.060,,64,American Amber / Red Ale,12
+Boohai Red Ale,940,0.06,,64,American Amber / Red Ale,12
 Crazy Mountain Amber Ale,356,0.052,25,64,American Amber / Red Ale,12
 Red Water Irish Style Red,2145,0.065,,213,American Amber / Red Ale,12
 South Ridge Amber Ale,1057,0.06,31,473,American Amber / Red Ale,16
 Dead Armadillo Amber Ale,1746,0.063,37,331,American Amber / Red Ale,12
 Deadicated Amber,924,0.054,27,492,American Amber / Red Ale,16
-Dock Street Amber Beer (1992),944,0.050,25,489,American Amber / Red Ale,12
+Dock Street Amber Beer (1992),944,0.05,25,489,American Amber / Red Ale,12
 Dry Dock Amber Ale,871,0.058,49,497,American Amber / Red Ale,12
 Loki Red Ale,2191,0.075,53,202,American Amber / Red Ale,16
 Loki Red Ale (2013),895,0.075,53,202,American Amber / Red Ale,16
@@ -130,7 +130,7 @@ Devils Head Red Ale,1518,0.073,,356,American Amber / Red Ale,16
 McKinney Eddy Amber Ale,521,0.055,20,315,American Amber / Red Ale,16
 Blood of the Unicorn,2559,0.065,,53,American Amber / Red Ale,16
 Chronic Ale,1457,0.049,,371,American Amber / Red Ale,16
-Liquid Amber Ale,64,0.050,17,549,American Amber / Red Ale,12
+Liquid Amber Ale,64,0.05,17,549,American Amber / Red Ale,12
 Copper Hook (2011),339,0.058,27,488,American Amber / Red Ale,12
 Colorado Red Ale,220,0.062,,387,American Amber / Red Ale,12
 Hustle,2452,0.057,42,94,American Amber / Red Ale,12
@@ -285,7 +285,7 @@ Dirty Blonde Chocolate Ale,1275,0.048,,366,American Blonde Ale,12
 Bring Back the Beach Blonde Ale,1185,0.055,,380,American Blonde Ale,16
 Gossamer Golden Ale,149,0.042,,328,American Blonde Ale,16
 Half Full Bright Ale,1361,0.052,18,249,American Blonde Ale,12
-Great Falls Select Pale Ale,506,0.050,30,536,American Blonde Ale,12
+Great Falls Select Pale Ale,506,0.05,30,536,American Blonde Ale,12
 Kaua'i Golden Ale,2183,0.049,,205,American Blonde Ale,12
 Hilliard's Blonde,724,0.049,20,363,American Blonde Ale,16
 Double D Blonde,2195,0.049,20,199,American Blonde Ale,12
@@ -374,7 +374,7 @@ Hapa Brown Ale,2181,0.064,,205,American Brown Ale,19.2
 Hapa Brown Ale,2180,0.064,,205,American Brown Ale,12
 One Nut Brown,1834,0.047,28,298,American Brown Ale,12
 Widow Maker Black Ale,60,0.052,,85,American Brown Ale,12
-Lift Bridge Brown Ale,59,0.050,,85,American Brown Ale,12
+Lift Bridge Brown Ale,59,0.05,,85,American Brown Ale,12
 Sweet Josie,2326,0.061,30,150,American Brown Ale,12
 Macon History Ale,1008,0.055,,401,American Brown Ale,12
 Gnarly Brown,1125,0.07,32,92,American Brown Ale,12
@@ -738,7 +738,7 @@ Hopworks IPA (2012),653,0.066,75,81,American IPA,16
 Let It Ride IPA,1903,0.068,90,278,American IPA,12
 Infamous IPA,2038,0.07,75,243,American IPA,12
 I-10 IPA,558,0.068,55,528,American IPA,12
-Appreciation Ale,1784,0.070,40,317,American IPA,16
+Appreciation Ale,1784,0.07,40,317,American IPA,16
 Hop Ryot,2363,0.065,,93,American IPA,12
 Mystic Mama IPA,689,0.07,,93,American IPA,12
 Welcome to Scoville,2408,0.069,,115,American IPA,12
@@ -812,7 +812,7 @@ Watershed IPA,2331,0.067,70,151,American IPA,12
 Watershed IPA (2013),999,0.067,70,151,American IPA,12
 Overbite IPA,891,0.075,,302,American IPA,16
 Pinner Throwback IPA,2302,0.049,35,167,American IPA,12
-Icey.P.A.,1752,0.070,65,167,American IPA,16
+Icey.P.A.,1752,0.07,65,167,American IPA,16
 Birth IPA,1750,,,167,American IPA,12
 oSKAr the G'Rauch,993,0.085,,167,American IPA,19.2
 oSKAr the G'Rauch,992,0.085,,167,American IPA,16
@@ -945,7 +945,7 @@ Wachusett Light IPA (2013),1029,0.04,37,296,American IPA,12
 Green Monsta IPA,618,0.06,55,296,American IPA,12
 Self Starter,2450,0.052,67,95,American IPA,16
 Flyin' Rye,2221,0.07,,95,American IPA,16
-West Sixth IPA,652,0.070,80,101,American IPA,12
+West Sixth IPA,652,0.07,80,101,American IPA,12
 Westbrook IPA,575,0.068,65,385,American IPA,12
 Charlie in the Rye,1550,0.058,55,352,American IPA,12
 Oâ€™Malleyâ€™s IPA,2343,0.075,89,133,American IPA,12
@@ -1081,7 +1081,7 @@ A Capella Gluten Free Pale Ale,1524,0.055,,33,American Pale Ale (APA),12
 Fox Tail Gluten Free Ale,469,0.05,50,234,American Pale Ale (APA),12
 Weekend Warrior Pale Ale,1557,0.055,40,126,American Pale Ale (APA),12
 Eddy Out Pale Ale,87,0.055,50,511,American Pale Ale (APA),16
-November Gale Pale Ale,779,0.050,5,85,American Pale Ale (APA),12
+November Gale Pale Ale,779,0.05,5,85,American Pale Ale (APA),12
 Peach Pale Ale,2434,0.057,40,105,American Pale Ale (APA),12
 Peacemaker Pale Ale,2329,0.057,47,150,American Pale Ale (APA),12
 Ride Again Pale Ale,1122,0.052,,457,American Pale Ale (APA),16
@@ -1426,7 +1426,7 @@ Becky's Black Cat Porter,917,0.07,55,495,American Porter,16
 Power House Porter,1076,0.057,,310,American Porter,12
 God Damn Pigeon Porter,2136,0.082,,176,American Porter,16
 Cowbell,2164,0.054,23,26,American Porter,16
-Bourbon Barrel Cowbell,1347,0.060,23,26,American Porter,16
+Bourbon Barrel Cowbell,1347,0.06,23,26,American Porter,16
 Zombie Monkie,1736,0.062,35,46,American Porter,16
 Peck's Porter,2640,0.065,35,8,American Porter,16
 Fivepine Chocolate Porter,2317,0.062,40,154,American Porter,12
@@ -1613,43 +1613,43 @@ Yoshi's Nectar,2614,0.053,27,22,California Common / Steam Beer,16
 Hot Date Ale,1791,0.06,20,315,Chile Beer,16
 L'il Lucy's Hot Pepper Ale,2341,0.049,28,133,Chile Beer,12
 Patty's Chile Beer,1345,0.042,,425,Chile Beer,12
-Ginja Ninja,2318,0.06,,155,Cider,12
-Cherried Away,2170,0.06,,155,Cider,12
-Rhubarbarian,2169,0.06,,155,Cider,12
-BrightCider,1502,0.06,,155,Cider,12
-Angry Orchard Apple Ginger,1294,0.05,,435,Cider,16
-Angry Orchard Crisp Apple,1293,0.05,,435,Cider,16
-Angry Orchard Crisp Apple,1292,0.05,,435,Cider,12
-Granny Smith Hard Apple Cider,1465,0.069,,405,Cider,16
-Dry Hard Apple Cider,1464,0.069,,405,Cider,16
-First Press,1342,0.05,,426,Cider,12
-Magic Apple,1341,0.05,,426,Cider,12
-Cranberry Blend,1246,0.049,,447,Cider,12
-Orignal Blend,977,0.051,,447,Cider,12
-Honey Cider,1558,0.048,,235,Cider,12
-Hard Cider,2483,0.068,,81,Cider,16
-Helen's Blend,1405,0.05,,417,Cider,12
-Jack's Hard Cider,823,0.051,,417,Cider,12
-Bushwhacker Cider,1986,0.069,,255,Cider,16
-Weim-R-Iner,1985,0.069,,255,Cider,16
-Cherry Bomb,1984,0.069,,255,Cider,16
-Happy Cider,1467,0.055,,404,Cider,16
-Oak Aged Cider,1503,0.065,,395,Cider,12
-Ginger Cider,1466,0.065,,395,Cider,12
-Schilling Hard Cider,1245,0.065,,395,Cider,12
-Dry Cider,1416,0.065,,412,Cider,16
-Dry Hard Cider,1415,0.065,,412,Cider,16
-Sietsema Red Label,2353,0.069,,138,Cider,16
-Gunga Din,2242,0.052,,187,Cider,16
-Uncle John's Apple Cherry Cider,1704,0.065,,339,Cider,16
-Uncle John's Apricot Apple Cider,1703,0.065,,339,Cider,16
-Draught Hard Apple Cider,877,0.065,,339,Cider,16
-Nunica Pine,2245,0.068,,186,Cider,16
-Ginger Peach,2244,0.069,,186,Cider,16
-Totally Roasted,1378,0.068,,186,Cider,16
-Blue Gold,1377,0.068,,186,Cider,16
-Hard Apple,1376,0.068,,186,Cider,16
-Woodchuck Amber Hard Cider,822,0.05,,502,Cider,12
+Ginja Ninja,2318,0.06,0,155,Cider,12
+Cherried Away,2170,0.06,0,155,Cider,12
+Rhubarbarian,2169,0.06,0,155,Cider,12
+BrightCider,1502,0.06,0,155,Cider,12
+Angry Orchard Apple Ginger,1294,0.05,0,435,Cider,16
+Angry Orchard Crisp Apple,1293,0.05,0,435,Cider,16
+Angry Orchard Crisp Apple,1292,0.05,0,435,Cider,12
+Granny Smith Hard Apple Cider,1465,0.069,0,405,Cider,16
+Dry Hard Apple Cider,1464,0.069,0,405,Cider,16
+First Press,1342,0.05,0,426,Cider,12
+Magic Apple,1341,0.05,0,426,Cider,12
+Cranberry Blend,1246,0.049,0,447,Cider,12
+Orignal Blend,977,0.051,0,447,Cider,12
+Honey Cider,1558,0.048,0,235,Cider,12
+Hard Cider,2483,0.068,0,81,Cider,16
+Helen's Blend,1405,0.05,0,417,Cider,12
+Jack's Hard Cider,823,0.051,0,417,Cider,12
+Bushwhacker Cider,1986,0.069,0,255,Cider,16
+Weim-R-Iner,1985,0.069,0,255,Cider,16
+Cherry Bomb,1984,0.069,0,255,Cider,16
+Happy Cider,1467,0.055,0,404,Cider,16
+Oak Aged Cider,1503,0.065,0,395,Cider,12
+Ginger Cider,1466,0.065,0,395,Cider,12
+Schilling Hard Cider,1245,0.065,0,395,Cider,12
+Dry Cider,1416,0.065,0,412,Cider,16
+Dry Hard Cider,1415,0.065,0,412,Cider,16
+Sietsema Red Label,2353,0.069,0,138,Cider,16
+Gunga Din,2242,0.052,0,187,Cider,16
+Uncle John's Apple Cherry Cider,1704,0.065,0,339,Cider,16
+Uncle John's Apricot Apple Cider,1703,0.065,0,339,Cider,16
+Draught Hard Apple Cider,877,0.065,0,339,Cider,16
+Nunica Pine,2245,0.068,0,186,Cider,16
+Ginger Peach,2244,0.069,0,186,Cider,16
+Totally Roasted,1378,0.068,0,186,Cider,16
+Blue Gold,1377,0.068,0,186,Cider,16
+Hard Apple,1376,0.068,0,186,Cider,16
+Woodchuck Amber Hard Cider,822,0.05,0,502,Cider,12
 Summer Solstice,1350,0.056,4,172,Cream Ale,12
 Summer Solstice Cerveza Crema (2009),753,0.056,4,172,Cream Ale,12
 Summer Solstice (2011),77,0.056,4,172,Cream Ale,12
@@ -1755,7 +1755,7 @@ Grandma's Pecan,1562,0.069,34,34,English Brown Ale,16
 Upslope Brown Ale,345,0.067,,52,English Brown Ale,12
 Passenger,2298,0.047,,168,English Dark Mild Ale,12
 THP Dark (2006),867,,,498,English Dark Mild Ale,12
-Dolores River Mild,446,0.050,,532,English Dark Mild Ale,16
+Dolores River Mild,446,0.05,,532,English Dark Mild Ale,16
 Great Crescent Mild Ale,439,0.042,26,166,English Dark Mild Ale,16
 Pub Ale,2033,0.038,18,246,English Dark Mild Ale,12
 NOLA Brown Ale,485,0.039,,175,English Dark Mild Ale,12
@@ -2048,7 +2048,7 @@ HavanÃ¼ther,1526,0.041,,391,Light Lager,16
 Lobo Lito,2238,0.04,12,188,Light Lager,12
 Montauk Light,2024,0.035,,250,Light Lager,12
 American Light,2231,0.032,13,130,Light Lager,12
-Scotty K NA,606,0.001,,523,Low Alcohol Beer,16
+Scotty K NA,606,0.001,0,523,Low Alcohol Beer,16
 OktoberBeast,1579,0.072,22,361,MÃ¤rzen / Oktoberfest,12
 Gyptoberfest,1613,0.056,26,108,MÃ¤rzen / Oktoberfest,12
 Samuel Adams Octoberfest,1281,0.053,15,301,MÃ¤rzen / Oktoberfest,12
@@ -2069,7 +2069,7 @@ Oktoberfest Revolution,417,0.057,25,45,MÃ¤rzen / Oktoberfest,12
 Franz,1992,0.052,21,94,MÃ¤rzen / Oktoberfest,12
 Oktoberfest,2373,0.062,,44,MÃ¤rzen / Oktoberfest,12
 Oktoberfest,1995,0.055,,31,MÃ¤rzen / Oktoberfest,12
-Santa Fe Oktoberfest,307,0.060,38,393,MÃ¤rzen / Oktoberfest,12
+Santa Fe Oktoberfest,307,0.06,38,393,MÃ¤rzen / Oktoberfest,12
 Oktoberfest Lager,166,0.058,25,372,MÃ¤rzen / Oktoberfest,12
 Socktoberfest,1482,0.06,,310,MÃ¤rzen / Oktoberfest,16
 Festie,369,0.048,12,384,MÃ¤rzen / Oktoberfest,12
@@ -2290,7 +2290,7 @@ Fearless Scottish Ale,112,0.05,,202,Scottish Ale,16
 Kilt Lifter Scottish-Style Ale (2009),179,0.06,21,161,Scottish Ale,12
 Skilak Scottish Ale,1193,0.058,,459,Scottish Ale,12
 Skilak Scottish Ale (2011),348,0.058,,459,Scottish Ale,12
-Olde Ore Dock Scottish Ale,364,0.070,,85,Scottish Ale,12
+Olde Ore Dock Scottish Ale,364,0.07,,85,Scottish Ale,12
 Back Country Scottish Ale,471,0.057,,538,Scottish Ale,12
 The Hole in Hadrian's Wall,1059,0.095,19,472,Scottish Ale,16
 Old Chub,5,0.08,35,167,Scottish Ale,12
@@ -2302,9 +2302,9 @@ Maxwell's Scottish Ale,1102,0.051,,44,Scottish Ale,12
 Java Mac,2215,0.054,,26,Scottish Ale,16
 Bourbon Barrel Wee Mac,1127,0.054,23,26,Scottish Ale,16
 Wee Mac Scottish-Style Ale,213,0.054,23,26,Scottish Ale,16
-Saranac Shandy,1359,0.042,,300,Shandy,12
-Curious Traveler Shandy,1732,0.044,,335,Shandy,12
-Big Island Shandy,1027,0.05,,475,Shandy,16
+Saranac Shandy,1359,0.042,0,300,Shandy,12
+Curious Traveler Shandy,1732,0.044,0,335,Shandy,12
+Big Island Shandy,1027,0.05,0,475,Shandy,16
 Scruffy's Smoked Alt,1584,0.051,35,30,Smoked Beer,16
 He Said Belgian-Style Tripel,1592,0.082,,369,Tripel,12
 Devils Tramping Ground Tripel,704,0.092,5,361,Tripel,12
