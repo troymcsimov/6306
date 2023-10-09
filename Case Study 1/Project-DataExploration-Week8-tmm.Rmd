@@ -54,9 +54,20 @@ lookup <- rbind(lookup,data.frame(abb = "DC", State = "District of Columbia"))
 # Add a new column with full state names to the data frame
 byStateName <- merge(byState_df, lookup, by = "abb", all.x = TRUE)
 
-# Print only necessary columns and leave out row names
+# Create dataset with just State and Count of Breweries
 subset_df <- byStateName[, c("State", "Breweries")]
-knitr::kable(subset_df, format="html")
+
+# Plot number of breweries by State
+subset_df$State <- factor(subset_df$State, 
+                              levels = subset_df$State[order(subset_df$Breweries, decreasing = TRUE)])
+ggplot(subset_df, aes(x = State, y = Breweries, fill = State)) +
+  geom_text(aes(label = Breweries), vjust = -0.5, size = 2) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  labs(y = "Number of Breweries", x = "State",
+       title = "Number of Breweries by State") +
+  theme_minimal() +
+theme(axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=90, hjust=1))  # Vertical x-axis labels
 
 ```
 
@@ -76,11 +87,11 @@ tail(brews, n=6) # Looks okay
 
 ## 3.	Address the missing values in each column.
 
-### A small variety of beers have extremely small amounts of hops, therefore, they may result in a 0 IBU rating.
+### There were only 17 beers missing ABV after we updated the beers_updated.csv file with research done on the Internet (sources provided in Beers_analysis.xlsx).  Because this is such a small number of beers, we have decided to remove these beers from the dataset.  Along with this update, we also changed the missing IBU values to 0 for 'Ciders', 'Low Alcohol Beer', and 'Shandys' as they usually contain little to zero IBU.  
 
-### In addition, it is possible for a beer to have such a high concentration of hops that the IBU rating would miscalculate and result in a 0 IBU rating.
+### For the remaining 944 beers with missing IBUs we took the median IBU for each Style of beer and used imputation to replace the missing values with the medians of the respective Style to preserve these records.  Based on our research, each Style of beer had a narrow range of IBUs often seen in beers within that classification.  For that reason we felt it necessary to take the median of each Style over the median of all beers seen in this dataset.
 
-### However, based on the distribution of ABV and Styles for the records missing IBU values, it appears as though the missing IBU values is not dependent on any other data in the dataset (MCAR), as such we have removed these 1,005 beers from further analysis with 1,405 beers remaining in the dataset.
+### 
 
 ```{r NAs}
 # There are only 17 beers missing ABV, these will be removed given the small amount
@@ -90,12 +101,12 @@ filtered_brews <- brews[!is.na(brews$ABV), ]
 nulls <- filtered_brews[is.na(brews$IBU), ]
 
 # Observe counts of unique values in each column to determine if any correlation might be identified of the 969 rows missing IBUs
-table(nulls['ABV']) # no correlation seen when compared to full dataset
-table(nulls['Ounces']) # no correlation seen when compared to full dataset
-table(nulls['Style']) # no correlation seen when compared to full dataset
-table(nulls['Name.y']) # no correlation seen when compared to full dataset
-table(nulls['City']) # no correlation seen when compared to full dataset
-table(nulls['State']) # no correlation seen when compared to full dataset
+#table(nulls['ABV']) # no correlation seen when compared to full dataset
+#table(nulls['Ounces']) # no correlation seen when compared to full dataset
+#table(nulls['Style']) # no correlation seen when compared to full dataset
+#table(nulls['Name.y']) # no correlation seen when compared to full dataset
+#table(nulls['City']) # no correlation seen when compared to full dataset
+#table(nulls['State']) # no correlation seen when compared to full dataset
 
 # Get median IBU of each Style
 IBU_lookup <- filtered_brews %>%
@@ -139,23 +150,25 @@ ABV_row_number <- which(median_result$ABV == max(median_result$ABV))
 IBU_row_number <- which(median_result$IBU == max(median_result$IBU))
 
 # Print the result with the highest median ABV by State highlighted in yellow and the highest median IBU by State hightlighted in pink
-knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% row_spec(ABV_row_number, background = "yellow") %>% row_spec(IBU_row_number, background = "pink")
+#knitr::kable(median_result, format="html", caption = "Median ABV and IBU by State") %>% #kable_styling(full_width = FALSE, position = "center", latex_options = "scale_down") %>% #row_spec(ABV_row_number, background = "yellow") %>% row_spec(IBU_row_number, background = "pink")
 
 # Plot bar chart showing median ABV for each state order by ABV desc
 median_result$State <- factor(median_result$State, 
                               levels = median_result$State[order(median_result$ABV, decreasing = TRUE)])
 ggplot(median_result, aes(x = State, y = ABV, fill = State)) +
+  geom_text(aes(label = ABV), angle = 90, hjust = -0.5, size = 2) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(y = "ABV", x = "State",
        title = "Median Alcohol by Volume by State") +
   theme_minimal() +
-theme(axis.title.x=element_blank(),
-        axis.text.x=element_text(angle=90, hjust=1))  # Vertical x-axis labels
-  
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=90, hjust=1))
+
   # Plot bar chart showing median IBU for each state order by IBU desc
 median_result$State <- factor(median_result$State, 
                               levels = median_result$State[order(median_result$IBU, decreasing = TRUE)])
 ggplot(median_result, aes(x = State, y = IBU, fill = State)) +
+  geom_text(aes(label = IBU), angle = 90, hjust = -0.5, size = 2) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(y = "IBU", x = "State",
        title = "Median International Bitterness Units by State") +
@@ -187,7 +200,7 @@ hist(filtered_brews$ABV, xlab = "ABV (Alcohol % by Volume)", main = "Histogram o
 
 ## 7.	Is there an apparent relationship between the bitterness of the beer and its alcoholic content? Draw a scatter plot.  Make your best judgment of a relationship and EXPLAIN your answer.
 
-### There appears to be a relationship of ABV to IBU data showing the as the % of alcohol by volume increases so does the bitterness
+### The amount of alcohol by volume in a beer does not explicitly increase the bitterness, however, adding more malt, and therefore more sugar, to beer to increase the amount of alcohol can offset the bitterness.  Based on this dataset, there appears to be a relationship of ABV to IBU data showing the as the % of alcohol by volume seen, so do we see an increase in international bitterness units.  
 
 ```{r IBU2ABV}
 ggplot(data = filtered_brews, mapping = aes(x = ABV, y = IBU)) + geom_jitter() + theme_pubclean() + xlab("ABV") + ylab ("IBU") + ggtitle ("Distribution of ABV by IBU")
